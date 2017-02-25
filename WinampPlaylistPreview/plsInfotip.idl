@@ -1,0 +1,40 @@
+// plsInfotip.idl : IDL source for plsInfotip.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (plsInfotip.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	
+	[
+		object,
+		uuid(CF6798F2-515A-4060-831F-2E480AFDBC84),
+		dual,
+		helpstring("IPlaylistShell Interface"),
+		pointer_default(unique)
+	]
+	interface IPlaylistShell : IDispatch
+	{
+	};
+
+[
+	uuid(08EBF2A2-871B-4DA2-85E0-28CD078B9CB4),
+	version(1.0),
+	helpstring("plsInfotip 1.0 Type Library")
+]
+library PLSINFOTIPLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	
+	[
+		uuid(B03B2BE9-ED70-4A4B-870A-5E5F5AE091DF),
+		helpstring("PlaylistShell Class")
+	]
+	coclass PlaylistShell
+	{
+		[default] interface IPlaylistShell;
+	};
+};

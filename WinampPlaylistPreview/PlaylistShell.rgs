@@ -1,0 +1,68 @@
+HKCR
+{
+	PlsInfotip.PlaylistShell.1 = s 'PlaylistShell Class'
+	{
+		CLSID = s '{B03B2BE9-ED70-4A4B-870A-5E5F5AE091DF}'
+	}
+	PlsInfotip.PlaylistShell = s 'PlaylistShell Class'
+	{
+		CLSID = s '{B03B2BE9-ED70-4A4B-870A-5E5F5AE091DF}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B03B2BE9-ED70-4A4B-870A-5E5F5AE091DF} = s 'PlaylistShell Class'
+		{
+			ProgID = s 'PlsInfotip.PlaylistShell.1'
+			VersionIndependentProgID = s 'PlsInfotip.PlaylistShell'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+	
+	.PlS
+	{
+		ShellEx
+		{	
+			'{00021500-0000-0000-C000-000000000046}' = s '{B03B2BE9-ED70-4A4B-870A-5E5F5AE091DF}'
+		}
+	}
+	.M3U
+	{
+		ShellEx
+		{	
+			'{00021500-0000-0000-C000-000000000046}' = s '{B03B2BE9-ED70-4A4B-870A-5E5F5AE091DF}'
+		}
+	}
+	.M3U8
+	{
+		ShellEx
+		{	
+			'{00021500-0000-0000-C000-000000000046}' = s '{B03B2BE9-ED70-4A4B-870A-5E5F5AE091DF}'
+		}
+	}
+}
+HKLM
+{
+    NoRemove Software
+    {
+        NoRemove Microsoft
+        {
+            NoRemove Windows
+            {
+                NoRemove CurrentVersion
+                {
+                    NoRemove 'Shell Extensions'
+                    {
+                        NoRemove Approved
+                        {
+                            val {B03B2BE9-ED70-4A4B-870A-5E5F5AE091DF} = s 'PlaylistShell Class'
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
