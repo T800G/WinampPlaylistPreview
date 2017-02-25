@@ -1,4 +1,4 @@
-# WinampPlaylistPreview
+# Winamp Playlist Preview
 Preview M3U, M3U8 and PLS playlists without opening them
 <br><br>![alt text](https://github.com/T800G/WinampPlaylistPreview/blob/master/plstip.png)<br>
 ##Minimum system requirements
